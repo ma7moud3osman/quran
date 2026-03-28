@@ -7,6 +7,8 @@ final sl = GetIt.instance;
 
 void initOnboardingInjection() {
   sl.registerLazySingleton(() => OnboardingDataSource(sl()));
-  sl.registerLazySingleton<OnboardingRepository>(() => OnboardingRepository(sl()));
+  sl.registerLazySingleton<OnboardingRepository>(
+    () => OnboardingRepository(sl()),
+  );
   sl.registerFactory(() => OnboardingProvider(sl()));
 }

@@ -51,7 +51,11 @@ class OnboardingProvider extends ChangeNotifier {
   }
 
   void updateLocation(double lat, double lng, String city) {
-    _settings = _settings.copyWith(latitude: lat, longitude: lng, cityName: city);
+    _settings = _settings.copyWith(
+      latitude: lat,
+      longitude: lng,
+      cityName: city,
+    );
     notifyListeners();
   }
 

@@ -12,7 +12,7 @@ class QuranSurahListScreen extends StatelessWidget {
       appBar: AppBar(title: Text(getSurahNameArabic(surahNumber))),
       body: QuranSurahListView(
         surahNumber: surahNumber,
-        isTajweed: true,
+        isTajweed: false,
         highlights: const [],
       ),
     );

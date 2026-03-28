@@ -1,5 +1,5 @@
 class AppConstants {
-  static const String appName = 'Holy Quran App';
+  static const String appName = 'Jannah';
   static const String translationPath = 'assets/translations';
   static const String citiesDataPath = 'assets/data/cities.json';
 

@@ -53,11 +53,14 @@ class LocationService {
 
   List<Map<String, dynamic>> searchCity(String query) {
     if (query.isEmpty) return [];
-    return _cities.where((city) {
-      final nameEn = city['name_en']?.toString().toLowerCase() ?? '';
-      final nameAr = city['name_ar']?.toString().toLowerCase() ?? '';
-      final lowerQuery = query.toLowerCase();
-      return nameEn.contains(lowerQuery) || nameAr.contains(lowerQuery);
-    }).take(20).toList();
+    return _cities
+        .where((city) {
+          final nameEn = city['name_en']?.toString().toLowerCase() ?? '';
+          final nameAr = city['name_ar']?.toString().toLowerCase() ?? '';
+          final lowerQuery = query.toLowerCase();
+          return nameEn.contains(lowerQuery) || nameAr.contains(lowerQuery);
+        })
+        .take(20)
+        .toList();
   }
 }

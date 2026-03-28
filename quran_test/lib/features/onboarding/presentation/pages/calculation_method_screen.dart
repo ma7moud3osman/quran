@@ -44,10 +44,7 @@ class CalculationMethodScreen extends StatelessWidget {
                 }).toList(),
               ),
             ),
-            CustomButton(
-              label: 'next'.tr(),
-              onPressed: onNext,
-            ),
+            CustomButton(label: 'next'.tr(), onPressed: onNext),
             const SizedBox(height: 16),
           ],
         ),

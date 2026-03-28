@@ -11,7 +11,8 @@ class LocationPermissionScreen extends StatefulWidget {
   const LocationPermissionScreen({super.key, required this.onNext});
 
   @override
-  State<LocationPermissionScreen> createState() => _LocationPermissionScreenState();
+  State<LocationPermissionScreen> createState() =>
+      _LocationPermissionScreenState();
 }
 
 class _LocationPermissionScreenState extends State<LocationPermissionScreen> {
@@ -58,9 +59,7 @@ class _LocationPermissionScreenState extends State<LocationPermissionScreen> {
             padding: EdgeInsets.all(16.0),
             child: Column(
               mainAxisSize: MainAxisSize.min,
-              children: [
-                Text("Offline search to be implemented"),
-              ],
+              children: [Text("Offline search to be implemented")],
             ),
           ),
         );
@@ -94,10 +93,7 @@ class _LocationPermissionScreenState extends State<LocationPermissionScreen> {
               onPressed: _requestLocation,
               isLoading: _isLoading,
             ),
-            TextButton(
-              onPressed: widget.onNext,
-              child: Text('skip'.tr()),
-            ),
+            TextButton(onPressed: widget.onNext, child: Text('skip'.tr())),
           ],
         ),
       ),

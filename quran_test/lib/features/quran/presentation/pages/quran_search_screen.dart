@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../../core/utils/enums.dart';
+import '../../../../core/routes/routes_name.dart';
+import '../../../../core/extension/go_router_extension.dart';
 import '../providers/quran_provider.dart';
 import 'package:widgets_box/widgets_box.dart';
 import 'package:easy_localization/easy_localization.dart';
+import 'package:qcf_quran_plus/qcf_quran_plus.dart';
 
 class QuranSearchScreen extends StatefulWidget {
   const QuranSearchScreen({super.key});
@@ -73,6 +76,13 @@ class _QuranSearchScreenState extends State<QuranSearchScreen> {
                       subtitle: Text(
                         '${result.surahName} - ${'ayah'.tr()} ${result.verseNumber}',
                       ),
+                      onTap: () {
+                        final page = getPageNumber(
+                          result.surahNumber,
+                          result.verseNumber,
+                        );
+                        context.pushToNamed(AppRoutes.quranMushaf, extra: page);
+                      },
                     );
                   },
                 );

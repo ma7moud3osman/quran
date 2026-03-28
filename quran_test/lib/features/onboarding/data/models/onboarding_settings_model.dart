@@ -21,14 +21,14 @@ class OnboardingSettingsModel extends Equatable {
   });
 
   factory OnboardingSettingsModel.fake() => const OnboardingSettingsModel(
-        calculationMethod: CalculationMethodEnum.egyptian,
-        madhab: MadhabEnum.shafii,
-        hijriOffset: 0,
-        isComplete: false,
-        latitude: 21.422487, // Mecca
-        longitude: 39.826206, // Mecca
-        cityName: 'Mecca',
-      );
+    calculationMethod: CalculationMethodEnum.egyptian,
+    madhab: MadhabEnum.shafii,
+    hijriOffset: 0,
+    isComplete: false,
+    latitude: 21.422487, // Mecca
+    longitude: 39.826206, // Mecca
+    cityName: 'Mecca',
+  );
 
   factory OnboardingSettingsModel.fromJson(Map<String, dynamic> json) =>
       OnboardingSettingsModel(
@@ -48,14 +48,14 @@ class OnboardingSettingsModel extends Equatable {
       );
 
   Map<String, dynamic> toJson() => {
-        'calculationMethod': calculationMethod.name,
-        'madhab': madhab.name,
-        'hijriOffset': hijriOffset,
-        'isComplete': isComplete,
-        'latitude': latitude,
-        'longitude': longitude,
-        'cityName': cityName,
-      };
+    'calculationMethod': calculationMethod.name,
+    'madhab': madhab.name,
+    'hijriOffset': hijriOffset,
+    'isComplete': isComplete,
+    'latitude': latitude,
+    'longitude': longitude,
+    'cityName': cityName,
+  };
 
   OnboardingSettingsModel copyWith({
     CalculationMethodEnum? calculationMethod,
@@ -79,12 +79,12 @@ class OnboardingSettingsModel extends Equatable {
 
   @override
   List<Object?> get props => [
-        calculationMethod,
-        madhab,
-        hijriOffset,
-        isComplete,
-        latitude,
-        longitude,
-        cityName,
-      ];
+    calculationMethod,
+    madhab,
+    hijriOffset,
+    isComplete,
+    latitude,
+    longitude,
+    cityName,
+  ];
 }

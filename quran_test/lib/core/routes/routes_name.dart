@@ -1,5 +1,6 @@
 class AppRoutes {
   // Onboarding
+  static const String splash = 'splash';
   static const String onboarding = 'onboarding_main';
 
   // Quran
@@ -11,6 +12,7 @@ class AppRoutes {
 
 class AppPaths {
   // Onboarding
+  static const String splash = '/';
   static const String onboarding = '/onboarding';
 
   // Quran
